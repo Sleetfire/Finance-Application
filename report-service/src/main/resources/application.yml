@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://db:5432/report-service?ApplicationName=TestSweetApp
+    username: postgres
+    password: 12378
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+urls:
+  account-url: "http://account-service:8080/account/%s"
+  operations-url: "http://account-service:8080/account/%s/operation/all"
+  currency-url: "http://classifier-service:8080/classifier/currency/%s"
+  operation-category-url: "http://classifier-service:8080/classifier/category/%s"
+  all-operation-category-url: "http://classifier-service:8080/classifier/operation/category/all"
+  email-url: "http://mail-service:8080/mail/report"
+cloud-storage:
+  cloud_name: "cloud_name"
+  api_key: "api_key"
+  api_secret: "api_secret"

@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://db:5432/mail-scheduler-service?ApplicationName=TestSweetApp
+    username: postgres
+    password: 12378
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: never
+      platform: postgres
+    properties:
+      "org.quartz.jobStore.driverDelegateClass": "org.quartz.impl.jdbcjobstore.PostgreSQLDelegate"
+      "org.quartz.jobStore.tablePrefix": "quartz.QRTZ_"
+urls:
+  report-service-url: "http://report-service:8080/report/%s"
+

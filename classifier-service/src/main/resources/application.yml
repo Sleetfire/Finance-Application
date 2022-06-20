@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://db:5432/classifier-service?ApplicationName=TestSweetApp
+    username: postgres
+    password: 12378
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp

@@ -1,0 +1,9 @@
+spring:
+  mvc:
+    view:
+      prefix: /views/
+mail-sender:
+  email: "email"
+  password: "password"
+
+

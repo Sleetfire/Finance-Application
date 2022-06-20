@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://db:5432/account-scheduler-service?ApplicationName=TestSweetApp
+    username: postgres
+    password: 12378
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: never
+      platform: postgres
+    properties:
+      "org.quartz.jobStore.driverDelegateClass": "org.quartz.impl.jdbcjobstore.PostgreSQLDelegate"
+      "org.quartz.jobStore.tablePrefix": "quartz.QRTZ_"
+urls:
+  post-url: "http://account-service:8080/account/%s/operation/"
+  currency-url: "http://classifier-service:8080/classifier/currency/%s"
+  operation-category-url: "http://classifier-service:8080/classifier/operation/category/%s"
